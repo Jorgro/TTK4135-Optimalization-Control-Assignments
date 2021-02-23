@@ -1,0 +1,6 @@
+PWD /Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Template
+INPUT /usr/local/texlive/2020basic/texmf.cnf
+INPUT /usr/local/texlive/2020basic/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2020basic/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Template/main.tex
+OUTPUT /Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Template/main.log
