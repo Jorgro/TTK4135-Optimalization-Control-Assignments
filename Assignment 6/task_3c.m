@@ -63,13 +63,13 @@ end
 
 subplot(2, 1, 1);
 plot(t, p_u);
-xlabel('t') 
-ylabel('u') 
+xlabel('t'); 
+ylabel('u');
 grid('on');
 
 t = 0:N;
 subplot(2, 1, 2);
 plot(t, y);
-xlabel('t') 
-ylabel('y') 
+xlabel('t');
+ylabel('y');
 grid('on');

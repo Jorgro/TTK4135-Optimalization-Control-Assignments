@@ -11,10 +11,211 @@
 \usepackage{color}
 \usepackage{biblatex}
 \usepackage{hyperref}
-\ovingnr{5}    % Nummer på innlevering
+\ovingnr{6}    % Nummer på innlevering
 \semester{Spring 2021}
 \fag{Optimization and Control \\ TTK4135}
 \institutt{Department for Engineering Cybernetics}
 
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
 \begin{document}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},
+}
+
+%1
+\begin{oppgave}
+    %a
+    \begin{punkt}
+        Since $a = \dot{v} = \ddot{s}$ we get the following:
+        \begin{align*}
+            \dot{x}_2 &= a = F \\
+            \dot{x}_1 &= v = x_2 \\
+            \implies \dot{x} &= \begin{bmatrix}
+                0 & 1 \\
+                0 & 0
+            \end{bmatrix}x +
+            \begin{bmatrix}
+                0 \\ 1
+            \end{bmatrix}u
+        \end{align*}
+    \end{punkt}
+
+    %b
+    \begin{punkt}
+        First calculate $e^{A_c \tau}$:
+        \begin{align*}
+            e^{A_c \tau} &= \sum_{k=0}^\infty \frac{1}{k!} (A_c \tau)^k \\
+            &= I + A_c \tau + \frac{A_c^2 \tau^2}{2!} + ... + \frac{A_c^n \tau^n}{n!} \\
+            A_c \cdot A_c &= \mathbf{0} \\
+            \implies e^{A_c \tau} &= I + A_c \tau = \begin{bmatrix}
+                1 & \tau \\
+                0 & 1
+            \end{bmatrix}
+        \end{align*}
+
+        For $A$ we then have:
+        \begin{align*}
+            e^{A_c T} &= \begin{bmatrix}
+                1 & T \\
+                0 & 1
+            \end{bmatrix} = \begin{bmatrix}
+                1 & 0.5 \\
+                0 & 1
+            \end{bmatrix}
+        \end{align*}
+
+        For $b$:
+        \begin{align*}
+            \int_0^T e^{A_c \tau} d\tau b_c &= \int_0^T e^{A_c \tau} b_c d\tau \\
+            &= \int_0^T \begin{bmatrix}
+                1 & \tau \\ 0 & 1
+            \end{bmatrix} \begin{bmatrix}
+                0 \\ 1
+            \end{bmatrix} d\tau \\
+            &= \int_0^T \begin{bmatrix}
+                \tau \\ 1
+            \end{bmatrix} d\tau \\
+            &= \begin{bmatrix}
+                \frac{\tau^2}{2} \\
+                \tau
+            \end{bmatrix} \biggr\rvert_{\tau = 0}^{\tau = T}\\
+            &= \begin{bmatrix}
+                \frac{T^2}{2} \\ T
+            \end{bmatrix} \\
+            &= \begin{bmatrix}
+                0.125 \\ 0.5
+            \end{bmatrix}
+        \end{align*}
+    \end{punkt}
+
+    %c
+    \begin{punkt}
+        The Riccati-equation is given by:
+        \begin{align*}
+            P_t &= Q + A^\top P_{t+1}(I + bR^{-1}b^\top P_t+1)^{-1} A \\
+            P_N &= Q
+        \end{align*}
+
+        The solution of this ($P_t$) is used in the definition of the feedback gain matrix $K_{t-1}$:
+        \begin{align*}
+            K_{t-1} &= R^{-1}b^\top P_t(I+bR^{-1}b^\top P_t)^{-1}A
+        \end{align*}
+
+        The feedback gain matrix is then used in the controller $u_t$ which minimizes $f(z)$:
+        \begin{align*}
+            u_t = -K_t x_t
+        \end{align*}
+        The solution is illustrated in Figure \ref{fig:1c}.
+         \begin{figure}[H]
+             \centering
+             \includegraphics[width=1.0\textwidth]{../1c.png}
+             \caption{The system and controller.}
+             \label{fig:1c}
+         \end{figure}
+    \end{punkt}
+
+    %d
+    \begin{punkt}
+        To solve the stationary Riccati equation I used the following code:
+        \lstinputlisting{../task_1d.m}
+
+        This gives that:
+        \begin{align*}
+            P &= \begin{bmatrix}
+                4.0350 & 2.0616 \\
+                2.0616 & 4.1438
+            \end{bmatrix} \\
+            K &= \begin{bmatrix}
+                0.6514 \\ 1.3142
+            \end{bmatrix} \\
+            \lambda &= 0.6307 \pm 0.1628i
+        \end{align*}
+
+        The resulting system is stable if $|\text{eig}(A-BK)| < 1$. Since
+        \begin{align*}
+            |\lambda_1| = |\lambda_2| = \sqrt{0.6307^2 + 0.1628^2} = 0.6514 < 1,
+        \end{align*}
+        the closed-loop system is stable.
+        \end{punkt}
+
+    %e
+    \begin{punkt}
+        \label{1e}
+        The closed-loop system is stable if the system $(A,B)$ is stabilizable and the system $(A,D)$ is detectable,
+        where $D$ is defined by $Q=D^\top D$. The first part means that the system must be stabilizable, since we have a infinite horizon.
+        The second part means hat we must be able to influence all unstable modes of the system. In order for us to influence
+        all unstable modes we must be able to detect them in our objective function (through $D$).
+    \end{punkt}
+\end{oppgave}
+
+%2
+\begin{oppgave}
+
+    %a
+    \begin{punkt}
+        The stationary one-dimensional Riccati equation is given by:
+        \begin{align*}
+            p &= q + ap(1+\frac{b^2p}{r})^{-1}a
+        \end{align*}
+        Some rest
+        \begin{align*}
+            p &= q + ap(1+\frac{b^2p}{r})^{-1}a \\
+            p &= q + a^2p \frac{1}{1+\frac{b^2p}{r}} \\
+            p s&= q + \frac{a^2pr}{r+b^2p}
+        \end{align*}
+        With $q=2$, $a=3$, $b=2$, $r=1$ we get:
+        \begin{align*}
+            p &= 2 + \frac{3^2p}{1+2^2p} \\
+            p(1+4p) &=2(1+4p)+9p \\
+            4p^2 - 16 -2 &= 0 \\
+            \implies p &= \frac{16 \pm \sqrt{16^2-4(-2)4}}{8} = 2 \pm \frac{3}{\sqrt{2}}
+        \end{align*}
+        Since $p$ must be above 0 (see equation 4.32d in "Merging Optimization and Control"), we choose
+        $p = 2 + \frac{3}{\sqrt{2}}$
+    \end{punkt}
+
+    %b
+    \begin{punkt}
+        The feedback gain is defined by:
+        \begin{align*}
+            k = \frac{bp}{r}(1 + \frac{b^2p}{r})^{-1}a
+        \end{align*}
+        Setting in all the values and $p = 2 + \frac{3}{\sqrt{2}}$ gives us:
+        \begin{align*}
+            k = \sqrt{2}
+        \end{align*}
+        This gives us that the optimal control law is given by:
+        \begin{align*}
+            u_t = -\sqrt{2}x_t
+        \end{align*}
+    \end{punkt}
+
+    %c
+    \begin{punkt}
+        Same answer as Task \hyperref[1e]{1e}.
+    \end{punkt}
+\end{oppgave}
+
+%3
+\begin{oppgave}
+
+\end{oppgave}
+
 \end{document}
