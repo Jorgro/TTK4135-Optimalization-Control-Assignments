@@ -213,8 +213,144 @@
     \end{punkt}
 \end{oppgave}
 
-%3
+% 3
 \begin{oppgave}
+
+    % a
+    \begin{punkt}
+        \label{3a}
+        The result from the previous assignment are shown in Figure \ref{fig:3a}.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{../3a.png}
+            \caption{$u_t$ and $y_t$ for inequality constrained control input.}
+            \label{fig:3a}
+        \end{figure}
+    \end{punkt}
+
+    % b
+    \begin{punkt}
+        Our $z$ will now only have $N/6$ control inputs. These control inputs are repeated for
+        $n=5$ time steps each, so we will have the same control input for 5 rows each in $A_{eq}$. The right part of $A_{eq}$ will then have the following structure
+        (simplified by just showing the row for $u_0$ and $u_1$):
+        \begin{align*}
+            \begin{bmatrix}
+                -B & 0 & 0 & 0 & 0 & 0 \\
+                -B & 0 & 0 & 0 & 0 & 0 \\
+                -B & 0 & 0 & 0 & 0 & 0 \\
+                -B & 0 & 0 & 0 & 0 & 0 \\
+                -B & 0 & 0 & 0 & 0 & 0 \\
+                -B & 0 & 0 & 0 & 0 & 0 \\
+                0 & -B & 0 & 0 & 0 & 0 \\
+                0 & -B & 0 & 0 & 0 & 0 \\
+                0 & -B & 0 & 0 & 0 & 0 \\
+                0 & -B & 0 & 0 & 0 & 0 \\
+                0 & -B & 0 & 0 & 0 & 0 \\
+                0 & -B & 0 & 0 & 0 & 0
+            \end{bmatrix}
+        \end{align*}
+
+        Simplifying by using $\bar{B} = \begin{bmatrix}
+            -B \\
+            -B \\
+            -B \\
+            -B \\
+            -B \\
+            -B
+        \end{bmatrix}$ gives us the following $A_{eq}$ matrix:
+
+        \begin{align*}
+            A_{eq} &= \begin{bmatrix}
+                I & 0 & \dots &  \dots & 0 & -\bar{B} & 0 & \dots & \dots & 0 \\
+                -A & I & \ddots &  & \vdots & 0 & \ddots & \ddots & & \vdots \\
+                0 & -A & \ddots & \ddots & \vdots & 0 & \ddots & \ddots & \ddots & \vdots \\
+                \vdots &  & \ddots & \ddots & 0 & \vdots &  & \ddots & \ddots & 0 \\
+                0 & \dots & 0 & -A & I & 0 & \dots & \dots & 0 & -\bar{B}
+            \end{bmatrix}
+        \end{align*}
+
+        The right part will now only have 6 columns due to the reduced number of control inputs.
+
+        The modified matrices can be found in the file \texttt{task\_3b.m}.
+
+        The results using input plotting can be found in Figure \ref{fig:3b}. As we can see the control inputs
+        are repeated for 5 time steps each. The resulting $y$ graph is almost the same as the one in \hyperref[3a]{Task 3a}, even
+        though we are input blocking and therefore have a smaller $z$ vector.
+
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{../3b.png}
+            \caption{$u_t$ and $y_t$ for even input blocking scheme.}
+            \label{fig:3b}
+        \end{figure}
+
+        \texttt{quadprog} still used 5 iterations with the interior-point-convex method which is the same same as
+        without input blocking. However when using the active-set method it went down from 5 iterations to 2. As we can see
+        the choice of method used influence the results a lot.
+    \end{punkt}
+
+    % c
+    \begin{punkt}
+        The results using better input parametrization are found in Figure \ref{fig:3c}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{../3c.png}
+            \caption{$u_t$ and $y_t$ for parametrized input blocking scheme.}
+            \label{fig:3c}
+        \end{figure}
+
+        As we can see the results are pretty much the same. Even though we have given the controller
+        more freedom in the beginning, this doesn't really matter as the control input is at the limit -1 anyways.
+
+        We still get 5 iterations using the interior-point-convex method.
+
+    \end{punkt}
+
+    % d
+    \begin{punkt}
+        The results from the previous assignment are shown in Figure \ref{fig:3d}.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{../3d.png}
+            \caption{$u_t$ and $y_t$ for MPC with horizon of $n=30$ with no input blocking.}
+            \label{fig:3d}
+        \end{figure}
+    \end{punkt}
+
+    % e
+    \begin{punkt}
+        The results with input blocking in MPC are shown in Figure \ref{fig:3e}.
+        As we can see the difference is neglectable between the MPC with no input blocking and
+        the MPC with input blocking.
+
+        Using the interior-point-convex method the performance gain was neglectable, but
+        with active-set method this performance gain was pretty significant, especially
+        since we solve the optimization problem at each step.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{../3d.png}
+            \caption{$u_t$ and $y_t$ for MPC with horizon of $n=30$ with input blocking.}
+            \label{fig:3e}
+        \end{figure}
+    \end{punkt}
+
+    % f
+    \begin{punkt}
+        The effect of using input blocking is that we allow for fewer control inputs, which leads to smaller
+        dimensions in the matrices used in constraints, objective function etc. Using the
+        interior-point-convex method this performance gain was neglectable in this particular
+        problem formulation, but with active-set method the decrease of iterations could be significant
+        given that in MPC the optimization problem is solved at each time step.
+
+        The reason for choosing input blocks of increasing length is to allow for the controller to make larger adjustments in the initial more
+        unstable phase and when it goes towards a steady-state it can keep the same control input for longer.
+
+    \end{punkt}
+
 
 \end{oppgave}
 

@@ -67,6 +67,21 @@ beq = zeros(size(Aeq, 1),1); % Generate b
 temp = A1*x0;
 beq(1) = temp(1);
 
+%% Find K (optimal gain) matrix
+
+Q_lqr = [
+    3 0 0 0
+    0 1 0 0
+    0 0 0.05 0
+    0 0 0 0.1
+];
+R_lqr = 0.1;
+
+K = dlqr(A1, B1, Q_lqr, R_lqr, []);
+
+%% Function for calculating ne
+
+
 %% Solve QP problem with linear model
 tic
 [z,lambda] = quadprog(Q,c,[],[],Aeq, beq, vlb, vub, z0); % hint: quadprog. Type 'doc quadprog' for more info 

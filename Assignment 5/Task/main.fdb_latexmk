@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber main"] 1613926518 "main.bcf" "main.bbl" "main" 1614009699
-  "main.bcf" 1614009699 106414 c1d34cc43706086644cbbbc92f74a082 "pdflatex"
+["biber main"] 1613926518 "main.bcf" "main.bbl" "main" 1614171398
+  "main.bcf" 1614171398 106414 c1d34cc43706086644cbbbc92f74a082 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1614009697 "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.tex" "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.pdf" "main" 1614009699
+["pdflatex"] 1614171397 "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.tex" "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.pdf" "main" 1614171398
   "../1d.png" 1613918184 23677 8b62dce884122a073eb30757626f1da5 ""
   "../1e_r1.png" 1613918925 21609 0dceec01428bd3783c0e016520a554c2 ""
   "../1e_r2.png" 1613918934 28045 d5be8f47bcf9a9095e69828fa13d9ff0 ""
@@ -12,8 +12,8 @@
   "../1f.png" 1613919892 27438 00a1628f9b1961e1866cf1d7ebbe2c45 ""
   "../2b.png" 1613922711 27449 f5c887a6dc2a45bf9606512800b05105 ""
   "../2c.png" 1613922894 24162 f6fc5cfc71408606824a253b49d70915 ""
-  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.aux" 1614009699 3733 46d49ade27f52b4fcc1c35a492807e17 ""
-  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.tex" 1614009697 7400 939d7f80b736cca2da3dea48255f7772 ""
+  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.aux" 1614171398 3733 46d49ade27f52b4fcc1c35a492807e17 ""
+  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.tex" 1614171396 7400 939d7f80b736cca2da3dea48255f7772 ""
   "/Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1612380395 28952 c5354d8ccf87bb06b97abea62a968c56 ""
   "/Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1612380394 31928 0aac10ee99a30620469b40ee9c08c5b1 ""
   "/Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk" 1612380395 26208 852cca70cd7b92733163f2d0e8364e2f ""
@@ -144,18 +144,18 @@
   "/usr/local/texlive/2020basic/texmf.cnf" 1586277716 628 4346f9a816ba8e5dc36d93d5100b369e ""
   "MPC_scheme_basic.png" 1613920623 165871 cec19bf4e2279733c756e482cfb553b6 ""
   "NTNUoving.cls" 1613920110 6950 f96c98d0d678dc3bc1a60e21deefa70c ""
-  "main.aux" 1614009699 3733 46d49ade27f52b4fcc1c35a492807e17 "pdflatex"
+  "main.aux" 1614171398 3733 46d49ade27f52b4fcc1c35a492807e17 "pdflatex"
   "main.bbl" 1613926520 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.out" 1614009698 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1614009699 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "main.tex" 1614009697 7400 939d7f80b736cca2da3dea48255f7772 ""
+  "main.out" 1614171398 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1614171398 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.tex" 1614171396 7400 939d7f80b736cca2da3dea48255f7772 ""
   "ntnulogoblaa.eps" 1613920110 1297 54ada1b50e9971523e0e29320817f5d1 ""
   (generated)
-  "main.log"
-  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.pdf"
-  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.log"
   "main.aux"
-  "main.bcf"
-  "main.run.xml"
+  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.pdf"
   "main.pdf"
   "main.out"
+  "main.bcf"
+  "main.log"
+  "main.run.xml"
+  "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 5/Task/main.log"

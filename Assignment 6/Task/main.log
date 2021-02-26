@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.3)  24 FEB 2021 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.3)  24 FEB 2021 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -708,14 +708,46 @@ File: ../1c.png Graphic file (type png)
 <use ../1c.png>
 Package pdftex.def Info: ../1c.png  used on input line 128.
 (pdftex.def)             Requested size: 426.79135pt x 224.27753pt.
- (/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../task_1d.m) [2 </Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../1c.png>] [3] 
+ (/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../task_1d.m) [2 </Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../1c.png>] [3]
+<../3a.png, id=75, 1124.2pt x 843.15pt>
+File: ../3a.png Graphic file (type png)
+<use ../3a.png>
+Package pdftex.def Info: ../3a.png  used on input line 226.
+(pdftex.def)             Requested size: 341.43437pt x 256.07324pt.
+ [4 </Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../3a.png (PNG copy)>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 275.
+ (/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+<../3b.png, id=88, 1124.2pt x 843.15pt>
+File: ../3b.png Graphic file (type png)
+<use ../3b.png>
+Package pdftex.def Info: ../3b.png  used on input line 284.
+(pdftex.def)             Requested size: 341.43437pt x 256.07324pt.
+ [5]
+<../3c.png, id=97, 1124.2pt x 843.15pt>
+File: ../3c.png Graphic file (type png)
+<use ../3c.png>
+Package pdftex.def Info: ../3c.png  used on input line 299.
+(pdftex.def)             Requested size: 341.43437pt x 256.07324pt.
+ [6 </Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../3b.png (PNG copy)> </Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../3c.png (PNG copy)>]
+<../3d.png, id=106, 1124.2pt x 843.15pt>
+File: ../3d.png Graphic file (type png)
+<use ../3d.png>
+Package pdftex.def Info: ../3d.png  used on input line 317.
+(pdftex.def)             Requested size: 341.43437pt x 256.07324pt.
+File: ../3d.png Graphic file (type png)
+<use ../3d.png>
+Package pdftex.def Info: ../3d.png  used on input line 335.
+(pdftex.def)             Requested size: 341.43437pt x 256.07324pt.
+ [7 </Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/../3d.png (PNG copy)>] 
 AED: lastpage setting LastPage
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
  (/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -723,18 +755,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17946 strings out of 482056
- 296068 string characters out of 5937676
- 1009355 words of memory out of 5000000
- 33323 multiletter control sequences out of 15000+600000
- 545189 words of font info for 55 fonts, out of 8000000 for 9000
+ 18010 strings out of 482056
+ 297133 string characters out of 5937676
+ 1009779 words of memory out of 5000000
+ 33364 multiletter control sequences out of 15000+600000
+ 545503 words of font info for 56 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 38i,14n,40p,900b,1749s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/main.pdf" (4 pages, 162273 bytes).
+ 38i,16n,40p,900b,1749s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </Users/jorgenr/Library/texlive/2020basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "/Users/jorgenr/Documents/MATLAB/TTK4135-Optimization-and-Control/Assignment 6/Task/main.pdf" (8 pages, 286164 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
