@@ -1,6 +1,6 @@
 % TTK4135 - Helicopter lab
 % Hints/template for problem 2.
-% Updated spring 2018, Andreas L. Flåten
+% Updated spring 2018, Andreas L. FlÃ¥ten
 
 %% Initialization and model definition
 init05; % Change this to the init file corresponding to your helicopter
@@ -79,8 +79,6 @@ R_lqr = 0.1;
 
 K = dlqr(A1, B1, Q_lqr, R_lqr, []);
 
-%% Function for calculating ne
-
 
 %% Solve QP problem with linear model
 tic
@@ -132,3 +130,9 @@ ylabel('p')
 subplot(515)
 plot(t,x4,'m',t,x4','mo'),grid
 xlabel('tid (s)'),ylabel('pdot')
+
+%% Function for calculating control step
+
+function [u] = control_step(u_opt, x_opt, x)
+    u = u_opt - K'*(x-x_opt);
+end
